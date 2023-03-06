@@ -102,7 +102,7 @@ body {
 .weather,
 .temperature,
 .feels-like,
-.humandity {
+.humidity {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
