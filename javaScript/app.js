@@ -8,6 +8,9 @@ const telemetryDiv = document.querySelector('.telemetry')
 const tempDiv = document.querySelector('.temp')
 const feelDiv = document.querySelector('.feel')
 const humDiv = document.querySelector('.hum')
+const modalDiv = document.querySelector('.modal-shadow')
+const infoBtn = document.querySelector('.info')
+const closeBtn = document.querySelector('.close')
 
 const getWeather = () => {
 	const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=0afa8eac72743cd870905591989f976c&units=metric`
@@ -73,6 +76,22 @@ const showError = () => {
 	searchCity.textContent = ''
 }
 
+const showModal = () => {
+	if (!(modalDiv.style.display === 'block')) {
+		modalDiv.style.display = 'block'
+		modalDiv.classList.toggle('modal-animation')
+	} else {
+		modalDiv.style.display = 'none'
+	}
+}
+
+const closeModal = () => {
+	modalDiv.style.display = 'none'
+}
+
+window.addEventListener('click', e => (e.target === modalDiv ? showModal() : false))
+infoBtn.addEventListener('click', showModal)
+closeBtn.addEventListener('click', closeModal)
 searchBtn.addEventListener('click', getWeather)
 searchInput.addEventListener('keyup', e => {
 	if (e.key == 'Enter') {
