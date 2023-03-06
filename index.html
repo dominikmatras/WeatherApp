@@ -17,25 +17,31 @@
 	<body>
 		<div class="body-shadow">
 			<div class="wrapper">
+				<!-- * Header application -->
 				<h1><i class="fa-solid fa-cloud-sun"></i>WeatherApp</h1>
 
+				<!-- * This element shows legends -->
 				<div class="info">
 					<i class="fa-solid fa-circle-info"></i>
 				</div>
 
+				<!-- * Search bar  -->
 				<div class="search-box">
 					<input type="text" class="search" />
 					<button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
 				</div>
 
-				<div class="selected-city">
+				<!-- * A div that contains the selected city with the flag of the country in which it is located -->
+				<div class="chosen-city">
 					<img class="flag" />
 					<h3 class="city">City</h3>
 				</div>
 
+				<!-- ! Show message of error -->
 				<p class="error"></p>
 
-				<div class="telemetry">
+				<!-- * A div that holds weather data inside -->
+				<div class="weather-data">
 					<div class="weather">
 						<p>Pogoda</p>
 						<div class="weather-icon"></div>
@@ -55,6 +61,7 @@
 				</div>
 			</div>
 
+			<!-- * Legend of weather icons -->
 			<div class="modal-shadow">
 				<div class="modal">
 					<h3>Legenda:</h3>
@@ -94,7 +101,6 @@
 						<img src="http://openweathermap.org/img/wn/50d@2x.png" alt="Mgła" />
 						- Mgła
 					</p>
-
 					<button class="close">Zamknij</button>
 				</div>
 			</div>
