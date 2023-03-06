@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WeatherApp</title>
+
+		<link rel="stylesheet" href="style/main.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+		<script src="https://kit.fontawesome.com/27df9314aa.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1><i class="fa-solid fa-cloud-sun"></i>WeatherApp</h1>
+
+			<div class="search-box">
+				<input type="text" class="search" />
+				<button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+			</div>
+
+			<div class="selected-city">
+				<img class="flag" />
+				<h3 class="city">City</h3>
+			</div>
+
+			<p class="error"></p>
+
+			<div class="telemetry">
+				<div class="weather">
+					<p>Pogoda</p>
+					<div class="weather-icon"></div>
+				</div>
+				<div class="temperature">
+					<p>Temperatura</p>
+					<div class="temp"></div>
+				</div>
+				<div class="feels-like">
+					<p>Temperatura odczuwalna</p>
+					<div class="feel"></div>
+				</div>
+				<div class="humandity">
+					<p>Zamglenie</p>
+					<div class="hum"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="javaScript/app.js"></script>
+	</body>
+</html>
