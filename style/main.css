@@ -12,7 +12,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
-.shadow-body {
+.body-shadow {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -21,6 +21,7 @@ body {
 }
 
 .wrapper {
+	position: relative;
 	width: 800px;
 	height: 400px;
 	background-color: rgb(40, 38, 38);
@@ -36,6 +37,16 @@ body {
 
 .wrapper .fa-cloud-sun {
 	margin-right: 10px;
+}
+
+.wrapper .info {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	padding: 20px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 24px;
 }
 
 .search-box {
@@ -149,9 +160,27 @@ body {
 	margin-top: 40px;
 	height: 40px;
 	border: 1px solid black;
-	background: linear-gradient(310deg, rgb(23, 255, 166) 0%, rgb(23, 209, 255) 100%);
+	background-color: #fff;
 	border-radius: 5px;
 	cursor: pointer;
-	color: #fff;
+	color: #000;
 	font-family: 'Montserrat', sans-serif;
+	transition: 0.2s ease-in-out;
+}
+
+.modal .close:hover {
+	background-color: #c7c7c7;
+}
+
+.modal-animation {
+	animation: show-modal 0.7s;
+}
+
+@keyframes show-modal {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
