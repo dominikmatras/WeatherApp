@@ -5,12 +5,19 @@
 }
 
 body {
+	background-image: url(https://i.natgeofe.com/n/1fcbc190-9968-4466-93b4-f32241c835e3/mount-fuji-clouds-weather-japan_16x9.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.shadow-body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: linear-gradient(10deg, rgb(23, 255, 166) 0%, rgb(23, 209, 255) 100%);
 	height: 100vh;
-	font-family: 'Montserrat', sans-serif;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .wrapper {
