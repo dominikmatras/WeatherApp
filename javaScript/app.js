@@ -4,11 +4,11 @@ const searchCity = document.querySelector('.city')
 const weatherIconBox = document.querySelector('.weather-icon')
 const errorParagraph = document.querySelector('.error')
 const flagImg = document.querySelector('.flag')
-const telemetryDiv = document.querySelector('.telemetry')
+const dataDiv = document.querySelector('.weather-data')
 const tempDiv = document.querySelector('.temp')
 const feelDiv = document.querySelector('.feel')
 const humDiv = document.querySelector('.hum')
-const modalDiv = document.querySelector('.modal-shadow')
+const modalShadow = document.querySelector('.modal-shadow')
 const infoBtn = document.querySelector('.info')
 const closeBtn = document.querySelector('.close')
 
@@ -23,8 +23,7 @@ const getWeather = () => {
 			weatherIconBox.innerHTML = ''
 			errorParagraph.textContent = ''
 			searchCity.textContent = ''
-			telemetryDiv.style.visibility = 'visible'
-
+			dataDiv.style.visibility = 'visible'
 			createWeatherImg(data.weather[0].icon)
 			showCity(data.sys.country, data.name)
 			showTemp(data.main.temp.toFixed(0))
@@ -71,25 +70,25 @@ const showHum = hum => {
 
 const showError = () => {
 	errorParagraph.textContent = 'Podaj poprawną nazwę miasta!'
-	telemetryDiv.style.visibility = 'hidden'
+	dataDiv.style.visibility = 'hidden'
 	weatherIconBox.innerHTML = ''
 	searchCity.textContent = ''
 }
 
 const showModal = () => {
-	if (!(modalDiv.style.display === 'block')) {
-		modalDiv.style.display = 'block'
-		modalDiv.classList.toggle('modal-animation')
+	if (!(modalShadow.style.display === 'block')) {
+		modalShadow.style.display = 'block'
+		modalShadow.classList.toggle('modal-animation')
 	} else {
-		modalDiv.style.display = 'none'
+		modalShadow.style.display = 'none'
 	}
 }
 
 const closeModal = () => {
-	modalDiv.style.display = 'none'
+	modalShadow.style.display = 'none'
 }
 
-window.addEventListener('click', e => (e.target === modalDiv ? showModal() : false))
+window.addEventListener('click', e => (e.target === modalShadow ? showModal() : false))
 infoBtn.addEventListener('click', showModal)
 closeBtn.addEventListener('click', closeModal)
 searchBtn.addEventListener('click', getWeather)

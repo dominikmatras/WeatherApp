@@ -68,24 +68,29 @@ body {
 	margin-left: 10px;
 	width: 60px;
 	border: 1px solid black;
-	background: linear-gradient(310deg, rgb(23, 255, 166) 0%, rgb(23, 209, 255) 100%);
+	background-color: rgb(29, 255, 180);
 	border-radius: 5px;
 	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
 }
 
-.selected-city {
+.search-btn:hover {
+	background-color: rgb(25, 206, 145);
+}
+
+.chosen-city {
 	margin: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.selected-city .city {
+.chosen-city .city {
 	visibility: hidden;
 	margin-left: 10px;
 }
 
-.telemetry {
+.weather-data {
 	margin-top: 10px;
 	width: 80%;
 	margin: 0 auto;
@@ -160,16 +165,16 @@ body {
 	margin-top: 40px;
 	height: 40px;
 	border: 1px solid black;
-	background-color: #fff;
+	background-color: rgb(29, 255, 180);
 	border-radius: 5px;
 	cursor: pointer;
 	color: #000;
 	font-family: 'Montserrat', sans-serif;
-	transition: 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
 }
 
 .modal .close:hover {
-	background-color: #c7c7c7;
+	background-color: rgb(25, 206, 145);
 }
 
 .modal-animation {
