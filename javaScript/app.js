@@ -28,11 +28,10 @@ const getWeather = () => {
 			errorParagraph.textContent = ''
 			searchCity.textContent = ''
 			dataDiv.style.visibility = 'visible'
-			// ! Using API to
 			createWeatherImg(data.weather[0].icon)
 			showCity(data.sys.country, data.name)
-			showTemp(data.main.temp.toFixed(0))
-			showFeelLike(data.main.feels_like.toFixed(0))
+			showTemp(data.main.temp.toFixed(1))
+			showFeelLike(data.main.feels_like.toFixed(1))
 			showHum(data.main.humidity)
 		})
 		.catch(err => {
