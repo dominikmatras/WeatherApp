@@ -15,9 +15,10 @@ body {
 .body-shadow {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 	align-items: center;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .wrapper {
@@ -27,7 +28,7 @@ body {
 	background-color: rgb(40, 38, 38);
 	color: #fff;
 	border-radius: 10px;
-	box-shadow: 0 0 10px black;
+	box-shadow: 0 0 10px #161616;
 }
 
 .wrapper h1 {
@@ -68,14 +69,14 @@ body {
 	margin-left: 10px;
 	width: 60px;
 	border: 1px solid black;
-	background-color: rgb(29, 255, 180);
+	background-color: #dce0ac;
 	border-radius: 5px;
 	cursor: pointer;
 	transition: background-color 0.2s ease-in-out;
 }
 
 .search-btn:hover {
-	background-color: rgb(25, 206, 145);
+	background-color: #c4c78b;
 }
 
 .chosen-city {
@@ -165,7 +166,7 @@ body {
 	margin-top: 40px;
 	height: 40px;
 	border: 1px solid black;
-	background-color: rgb(29, 255, 180);
+	background-color: #dce0ac;
 	border-radius: 5px;
 	cursor: pointer;
 	color: #000;
@@ -174,7 +175,7 @@ body {
 }
 
 .modal .close:hover {
-	background-color: rgb(25, 206, 145);
+	background-color: #c4c78b;
 }
 
 .modal-animation {
@@ -188,4 +189,53 @@ body {
 	to {
 		opacity: 1;
 	}
+}
+
+.forcast-wrapper {
+	width: 800px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+}
+
+.forcast-box {
+	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 152px;
+	height: 200px;
+	background-color: rgb(40, 38, 38);
+	border-radius: 10px;
+	padding: 10px;
+	color: #fff;
+}
+
+.forcast-box .forcast-date {
+	font-size: 16px;
+}
+
+.forcast-box .forcast-weather-icon img {
+	width: 90%;
+}
+
+.forcast-box .forcast-dayTemp {
+	margin-bottom: 5px;
+}
+
+.forcast-box .forcast-nightTemp {
+	color: #9b9b9b;
+}
+
+.footer-ab {
+	position: absolute;
+	bottom: 0;
+	font-weight: 700;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	color: #fff;
 }
