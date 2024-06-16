@@ -4,6 +4,24 @@
 	box-sizing: border-box;
 }
 
+.light-theme {
+	background-color: #f9f8fd;
+	color: rgb(40, 38, 38);
+}
+
+.light-color {
+	color: rgb(40, 38, 38);
+}
+
+.dark-theme {
+	background-color: rgb(40, 38, 38);
+	color: #f9f8fd;
+}
+
+.dark-color {
+	color: #f9f8fd;
+}
+
 body {
 	background-image: url(https://i.natgeofe.com/n/1fcbc190-9968-4466-93b4-f32241c835e3/mount-fuji-clouds-weather-japan_16x9.jpg);
 	background-repeat: no-repeat;
@@ -25,8 +43,6 @@ body {
 	position: relative;
 	width: 800px;
 	height: 400px;
-	background-color: rgb(40, 38, 38);
-	color: #fff;
 	border-radius: 10px;
 	box-shadow: 0 0 10px #161616;
 }
@@ -45,7 +61,15 @@ body {
 	top: 5px;
 	right: 10px;
 	padding: 20px;
-	color: #fff;
+	cursor: pointer;
+	font-size: 24px;
+}
+
+.wrapper .switch-theme {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	padding: 20px;
 	cursor: pointer;
 	font-size: 24px;
 }
@@ -61,7 +85,6 @@ body {
 	border: 1px solid black;
 	border-radius: 5px;
 	font-size: 22px;
-	color: #fff;
 	padding: 10px;
 }
 
@@ -144,8 +167,6 @@ body {
 	height: 550px;
 	padding: 30px 60px;
 	border-radius: 15px;
-	color: #fff;
-	background-color: rgb(40, 38, 38);
 	box-shadow: 0 0 10px black;
 }
 
@@ -208,10 +229,9 @@ body {
 	text-align: center;
 	width: 152px;
 	height: 200px;
-	background-color: rgb(40, 38, 38);
 	border-radius: 10px;
 	padding: 10px;
-	color: #fff;
+	box-shadow: 0 0 10px #161616;
 }
 
 .forcast-box .forcast-date {
@@ -237,5 +257,5 @@ body {
 	width: 100%;
 	text-align: center;
 	padding: 10px;
-	color: #fff;
+	color: #f9f8fd;
 }
